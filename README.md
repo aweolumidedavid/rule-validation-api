@@ -18,4 +18,35 @@ API endpoints
     - GET request: https://rule-validation-deploy.herokuapp.com/
     - POST request: https://rule-validation-deploy.herokuapp.com/validate-rule
 
+= EX1 =
+{
+  "rule": {
+    "field": "missions"
+    "condition": "gte",
+    "condition_value": 30
+  },
+  "data": {
+    "name": "James Holden",
+    "crew": "Rocinante",
+    "age": 34,
+    "position": "Captain",
+    "missions": 45
+  }
+}
+
+Response: (HTTP 200)
+{
+  "message": "field missions successfully validated."
+  "status": "success",
+  "data": {
+    "validation": {
+      "error": false,
+      "field": "missions",
+      "field_value": 45,
+      "condition": "gte",
+      "condition_value: 30
+    }
+  }
+}
+
 
