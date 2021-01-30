@@ -4,6 +4,8 @@
   "description": "To create a simple rule-validation API.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "mocha --timeout 15000"
   },
   "repository": {
